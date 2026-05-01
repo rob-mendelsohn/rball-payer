@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; print\\('Pillow OK'\\)\")",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\rob\\\\Projects\\\\rball-payer\" -File | Where-Object { $_.Extension -in @\\('.png','.ico','.svg'\\) } | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}})",
+      "PowerShell(Get-ChildItem \"C:\\\\Users\\\\rob\\\\Projects\\\\rball-payer\" | Select-Object Name, @{N='KB';E={[math]::Round\\($_.Length/1KB,1\\)}})"
+    ]
+  }
+}

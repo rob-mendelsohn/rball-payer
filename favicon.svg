@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Clip strings to the racquet head ellipse -->
+    <clipPath id="head-clip">
+      <ellipse cx="256" cy="192" rx="109" ry="129"/>
+    </clipPath>
+    <!-- Drop shadow for the dollar sign -->
+    <filter id="dollar-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="2" dy="3" stdDeviation="5"
+                    flood-color="#000000" flood-opacity="0.40"/>
+    </filter>
+  </defs>
+
+  <!-- ── Background circle ─────────────────────────────── -->
+  <circle cx="256" cy="256" r="252" fill="#1a472a"/>
+
+  <!-- ── Racquet strings (clipped to head) ─────────────── -->
+  <g clip-path="url(#head-clip)" stroke="#e8b84b" stroke-width="7" stroke-opacity="0.42">
+    <!-- 6 horizontal strings, evenly spaced from y≈79 to y≈305 -->
+    <line x1="130" y1="79"  x2="382" y2="79"/>
+    <line x1="130" y1="124" x2="382" y2="124"/>
+    <line x1="130" y1="169" x2="382" y2="169"/>
+    <line x1="130" y1="215" x2="382" y2="215"/>
+    <line x1="130" y1="260" x2="382" y2="260"/>
+    <line x1="130" y1="305" x2="382" y2="305"/>
+    <!-- 4 vertical strings, evenly spaced from x≈176 to x≈336 -->
+    <line x1="176" y1="50" x2="176" y2="340"/>
+    <line x1="229" y1="50" x2="229" y2="340"/>
+    <line x1="283" y1="50" x2="283" y2="340"/>
+    <line x1="336" y1="50" x2="336" y2="340"/>
+  </g>
+
+  <!-- ── Racquet head outline ───────────────────────────── -->
+  <ellipse cx="256" cy="192" rx="109" ry="129"
+           fill="none" stroke="#e8b84b" stroke-width="15"/>
+
+  <!-- ── Racquet handle ─────────────────────────────────── -->
+  <rect x="234" y="314" width="44" height="133" rx="13" fill="#e8b84b"/>
+
+  <!-- ── Dollar sign (centered on head, with shadow) ───── -->
+  <text x="256" y="192"
+        text-anchor="middle" dominant-baseline="central"
+        font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif"
+        font-size="148" font-weight="900"
+        fill="white"
+        filter="url(#dollar-shadow)">$</text>
+</svg>

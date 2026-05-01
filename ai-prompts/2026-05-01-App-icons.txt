@@ -1,0 +1,10 @@
+I have a racquetball court reimbursement web app deployed on Firebase Hosting. It is a single index.html file (plus manifest.json, firebase.json, database.rules.json). The app tracks which players played each half-hour slot during a Saturday morning session at a racket club called "Spark", calculates each player's share of the $30/hour court fee, and stores session data in Firebase Realtime Database.
+Please make the following enhancement:
+Add a proper favicon and PWA icons so the site shows an appropriate icon in browser tabs and when saved to a phone's home screen.
+
+Design an icon that combines a racquetball/racquet motif with a subtle payment/money cue (e.g. a racquet with a small dollar sign, or a shuttlecock-style ball with a "$"). The primary color should be #1a472a (deep court green) with #e8b84b (gold/accent) as the secondary.
+Generate the icon as an SVG, then produce rasterized PNG exports at 192×192 and 512×512 pixels (required for the PWA manifest).
+Add a 32×32 favicon.ico (or a favicon.svg — modern browsers support SVG favicons).
+In index.html, add the appropriate <link> tags in <head> for the favicon and Apple touch icon.
+The manifest.json already references icon-192.png and icon-512.png — make sure the generated files match those names exactly.
+Use a Python script (with cairosvg or Pillow) or any available tool to produce the PNG files locally, and place all icon files in the project root alongside index.html.
